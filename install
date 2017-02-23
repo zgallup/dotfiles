@@ -10,6 +10,7 @@ fi
 cd ${DOTFILES_ROOT}
 
 # zsh
+sudo apt-get install zsh
 curl -L http://install.ohmyz.sh | sh
 
 # install vundle 
