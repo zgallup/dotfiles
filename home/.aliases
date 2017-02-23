@@ -1,0 +1,7 @@
+alias .='cd ..'
+alias ..='cd ../..'
+
+alias be='bundle exec'
+
+alias l='ls -alh'
+alias s='ls -ah'

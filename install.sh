@@ -1,0 +1,35 @@
+#!/bin/bash
+
+DOTFILES_ROOT="${HOME}/.dotfiles"
+DOTFILES_REPO="git@github.com:zgallup/dotfiles.git"
+
+if [[ ! -d ${DOTFILES_ROOT} ]]; then
+  git clone ${DOTFILES_REPO} ${DOTFILES_ROOT}
+fi
+
+cd ${DOTFILES_ROOT}
+
+# zsh
+curl -L http://install.ohmyz.sh | sh
+
+# install vundle 
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+# symlink files
+ln -sf ${DOTFILES_ROOT}/home/.aliases      ~/.aliases
+ln -sf ${DOTFILES_ROOT}/home/.vimrc        ~/.vimrc
+ln -sf ${DOTFILES_ROOT}/home/.vimrc.local  ~/.vimrc.local
+ln -sf ${DOTFILES_ROOT}/home/.zshrc        ~/.zshrc
+
+# import color scheme
+mdkir ~/.vim/colors
+git clone https://github.com/altercation/vim-colors-solarized.git
+mv ${DOTFILES_ROOT}/vim-colors-solarized/colors/solarized.vim  ~/.vim/colors/
+
+# vim plugins
+vim +PluginInstall +qa
+
+# switch shell to zsh
+if [ $SHELL != '/bin/zsh' ]; then
+  chsh -s /bin/zsh
+fi
