@@ -1,13 +1,16 @@
 #!/bin/bash
 
 DOTFILES_ROOT="${HOME}/.dotfiles"
-DOTFILES_REPO="git@github.com:zgallup/dotfiles.git"
+DOTFILES_REPO="https://github.com/zgallup/dotfiles.git"
 
 if [[ ! -d ${DOTFILES_ROOT} ]]; then
   git clone ${DOTFILES_REPO} ${DOTFILES_ROOT}
 fi
 
 cd ${DOTFILES_ROOT}
+
+# vim
+sudo apt-get install vim -y
 
 # zsh
 sudo apt-get install zsh
@@ -23,7 +26,7 @@ ln -sf ${DOTFILES_ROOT}/home/.vimrc.local  ~/.vimrc.local
 ln -sf ${DOTFILES_ROOT}/home/.zshrc        ~/.zshrc
 
 # import color scheme
-mdkir ~/.vim/colors
+mkdir ~/.vim/colors
 git clone https://github.com/altercation/vim-colors-solarized.git
 mv ${DOTFILES_ROOT}/vim-colors-solarized/colors/solarized.vim  ~/.vim/colors/
 
