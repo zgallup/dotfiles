@@ -32,8 +32,3 @@ mv ${DOTFILES_ROOT}/vim-colors-solarized/colors/solarized.vim  ~/.vim/colors/
 
 # vim plugins
 vim +PluginInstall +qa
-
-# switch shell to zsh
-if [ $SHELL != '/bin/zsh' ]; then
-  chsh -s /bin/zsh
-fi
