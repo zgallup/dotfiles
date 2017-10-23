@@ -2,7 +2,7 @@ scriptencoding utf-8
 set encoding=utf-8
 syntax on
 set background=dark
-colorscheme onedark
+colorscheme solarized
 
 " markdown folding
 let g:vim_markdown_folding_disabled = 1
