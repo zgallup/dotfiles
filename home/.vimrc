@@ -22,6 +22,8 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'mattn/emmet-vim'
 Plugin 'AndrewRadev/splitjoin.vim'
 
+Plugin 'joshdick/onedark.vim'
+
 Plugin 'scrooloose/nerdtree'
 Plugin 'duff/vim-bufonly'
 Plugin 'mileszs/ack.vim'
