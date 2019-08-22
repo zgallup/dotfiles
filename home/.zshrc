@@ -3,7 +3,7 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 
 ZSH_THEME="steeef"
-plugins=(git ruby rails vim)
+plugins=(git python ruby rails vim)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases
