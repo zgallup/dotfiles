@@ -3,7 +3,7 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 
 ZSH_THEME="steeef"
-plugins=(git python ruby rails vim)
+plugins=(git ruby rails)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases
@@ -21,7 +21,7 @@ setopt COMPLETE_ALIASES
 # Local config
 [[ -a ~/.localrc ]] && source ~/.localrc
 
-+# Code Environment Settings
-+source /usr/local/opt/chruby/share/chruby/chruby.sh
-+source /usr/local/opt/chruby/share/chruby/auto.sh
-+eval "$(pyenv init -)"
+# Code Environment Settings
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+source /usr/local/opt/chruby/share/chruby/auto.sh
+eval "$(pyenv init -)"
