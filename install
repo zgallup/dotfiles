@@ -26,9 +26,15 @@ ln -sf ${DOTFILES_ROOT}/home/.vimrc.local  ~/.vimrc.local
 ln -sf ${DOTFILES_ROOT}/home/.zshrc        ~/.zshrc
 
 # import color scheme
+git clone https://github.com/joshdick/onedark.vim.git
+
+# create scheme directories
 mkdir ~/.vim/colors
-git clone https://github.com/altercation/vim-colors-solarized.git
-mv ${DOTFILES_ROOT}/vim-colors-solarized/colors/solarized.vim  ~/.vim/colors/
+mkdir ~/.vim/autoload
+
+# move scheme files
+mv ${DOTFILES_ROOT}/onedark.vim/colors/onedark.vim  ~/.vim/colors/
+mv ${DOTFILES_ROOT}/onedark.vim/autoload/onedark.vim  ~/.vim/autoload/
 
 # vim plugins
 vim +PluginInstall +qa
